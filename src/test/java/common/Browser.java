@@ -80,8 +80,8 @@ public class Browser {
     }
 
     public static void sendKeys(By element, String withText){
-        //driver.findElement(element).sendKeys(withText);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(element)).sendKeys(withText);
+        driver.findElement(element).sendKeys(withText);
+        //wait.until(ExpectedConditions.visibilityOfElementLocated(element)).sendKeys(withText);
     }
 
     public static void visit(String url){
