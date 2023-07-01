@@ -26,9 +26,10 @@ public class Browser {
 
     public static void launch(String browserName) {
         if (browserName.equalsIgnoreCase("chrome")) {
-            ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.addArguments("--headless=new");
-            driver = new ChromeDriver(chromeOptions);
+              driver = new ChromeDriver();
+//            ChromeOptions chromeOptions = new ChromeOptions();
+//            chromeOptions.addArguments("--headless=new");
+//            driver = new ChromeDriver(chromeOptions);
         } else if (browserName.equalsIgnoreCase("firefox")) {
             driver = new FirefoxDriver();
         } else if (browserName.equalsIgnoreCase("safari")) {
@@ -80,7 +81,8 @@ public class Browser {
     }
 
     public static void sendKeys(By element, String withText){
-        driver.findElement(element).sendKeys(withText);
+        //driver.findElement(element).sendKeys(withText);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(element)).sendKeys(withText);
     }
 
     public static void visit(String url){

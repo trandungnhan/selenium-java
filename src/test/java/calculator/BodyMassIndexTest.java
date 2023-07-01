@@ -1,8 +1,6 @@
 package calculator;
 import common.BaseTest;
 import common.Browser;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import pages.BodyMassIndexPage;
